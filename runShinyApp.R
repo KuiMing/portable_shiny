@@ -1,6 +1,4 @@
-.libPaths("./R-Portable/App/R-Portable/library")
-# you need the full path to portable chrome
-
-browser.path = file.path(getwd(),"GoogleChromePortable/GoogleChromePortable.exe")
-options(browser = browser.path)
-shiny::runApp("./fibro/",port=8888,launch.browser=TRUE)
+logfile=dir()
+logfile=logfile[grepl('[0-9]+',logfile)]
+file.remove(logfile)
+shiny::runApp("./shiny/",port=8888,launch.browser=TRUE)
