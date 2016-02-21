@@ -11,11 +11,7 @@ shinyServer(function(input, output) {
                  stringsAsFactors = FALSE)
 
     if (input$action){
-      y=dir('../')
-      y=y[grepl('[0-9]+',y)]
-      file.remove(y)
-
-      # q()
+      q()
     }
     
       x$score=exp(-3.8+2.8*x$A-4.01*x$B+0.7*x$C)/(1+exp(-3.8+2.8*x$A-4.01*x$B+0.7*x$C))
